@@ -17,7 +17,7 @@ export class CreateUsers1657191071709 implements MigrationInterface {
 
                     },
                     {
-                        name: "usrename",
+                        name: "username",
                         type: "varchar",
                         isUnique: true
                     },
