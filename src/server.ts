@@ -28,7 +28,7 @@ app.use((err: Error, request: Request, response: Response, Next: NextFunction) =
 
     response.status(500).json ({
         status: "error",
-        message: 'Internal Server Error - ${err.message}',
+        message: '"Internal Server Error - ' + `${err.message}`
     })
 
 })
