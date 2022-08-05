@@ -1,7 +1,7 @@
 //import fs from 'fs'
 import fs from 'fs';
 import { parse } from 'csv-parse';
-import { ICategoriesRepository } from '../../repositories/ICategoriesRepository';
+import { ICategoriesRepository } from '@modules/cars/repositories/ICategoriesRepository';
 import { Category } from '../../entities/Category';
 import { inject, injectable } from 'tsyringe';
 

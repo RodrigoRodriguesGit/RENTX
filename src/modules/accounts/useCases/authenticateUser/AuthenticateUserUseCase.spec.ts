@@ -1,8 +1,8 @@
-import { AppError } from "../../../../errors/AppError"
-import { ICreateCategoryDTO } from "../../../cars/repositories/ICategoriesRepository"
-import { ICreateUserDTO } from "../../dtos/ICreateUserDTO"
+import { AppError } from "@errors/AppError"
+import { ICreateCategoryDTO } from "@modules/cars/repositories/ICategoriesRepository"
+import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO"
 import { User } from "../../entities/User"
-import { UsersRepositoryInMemory } from "../../repositories/in-memory/UsersRepositoryInMemory"
+import { UsersRepositoryInMemory } from "@modules/accounts/repositories/in-memory/UsersRepositoryInMemory"
 import { CreateUserUseCase } from "../createUser/CreateUserUseCase"
 import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase"
 
