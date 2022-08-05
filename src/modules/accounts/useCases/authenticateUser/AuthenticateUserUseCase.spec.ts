@@ -8,9 +8,12 @@ import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase"
 
 let authenticateUserUseCase: AuthenticateUserUseCase
 let usersRepositoryInMemory: UsersRepositoryInMemory
+
 let createUserUseCase: CreateUserUseCase
 
 // git teste de dados
+/// outro testye de envio a commit
+
 
 describe("Authenticate User", () => {
   
