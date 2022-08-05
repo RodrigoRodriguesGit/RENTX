@@ -10,6 +10,8 @@ let authenticateUserUseCase: AuthenticateUserUseCase
 let usersRepositoryInMemory: UsersRepositoryInMemory
 let createUserUseCase: CreateUserUseCase
 
+// git teste de dados
+
 describe("Authenticate User", () => {
   
     beforeEach(() => {
