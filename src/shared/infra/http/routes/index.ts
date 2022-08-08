@@ -1,7 +1,6 @@
 import  express, { Router } from 'express'
-import { CreateUserController } from '../modules/accounts/useCases/createUser/CreateUserController';
-import { categoriesRoutes } from '../routes/categories.routes' 
-import { specificationsRoutes } from '../routes/specification.routes' 
+import { categoriesRoutes } from './categories.routes' 
+import { specificationsRoutes } from './specification.routes' 
 import { authenticateRoutes } from './authenticate.routes';
 import { usersRoutes } from './users.routes';
 

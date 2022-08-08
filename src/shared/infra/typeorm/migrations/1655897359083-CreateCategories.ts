@@ -1,6 +1,6 @@
 import {MigrationInterface, QueryRunner} from "typeorm";
 import { Table } from "typeorm/schema-builder/table/Table";
-import { CategoriesRepository } from "../../modules/cars/repositories/implementations/CategoriesRepository";
+import { CategoriesRepository } from "../../../../modules/cars/infra/typeorm/repositories/CategoriesRepository";
 
 export class CreateCategories1655897359083 implements MigrationInterface {
 

@@ -1,4 +1,4 @@
-import { AppError } from "@errors/AppError"
+import { AppError } from "@shared/errors/AppError"
 import { ICreateCategoryDTO } from "@modules/cars/repositories/ICategoriesRepository"
 import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO"
 import { User } from "../../entities/User"
