@@ -9,19 +9,13 @@ import { CategoriesRepository } from "@modules/cars/infra/typeorm/repositories/C
 import { categoriesRoutes } from "../infra/http/routes/categories.routes"
 import { SpecificationRepository } from "@modules/cars/infra/typeorm/repositories/SpecificationRepository"
 import { UsersRepository } from "@modules/accounts/infra/typeorm/repositories/UsersRepository"
+import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository"
+import { CarsRepository } from "@modules/cars/infra/typeorm/repositories/CarsRepository"
 
-container.registerSingleton<ICategoriesRepository>(
-    "CategoriesRepository", 
-    CategoriesRepository
-)
+container.registerSingleton<ICategoriesRepository>("CategoriesRepository", CategoriesRepository)
 
-container.registerSingleton<ISpecificationRepository>(
-    "SpecificationRepository", 
-    SpecificationRepository
-)
+container.registerSingleton<ISpecificationRepository>("SpecificationRepository", SpecificationRepository)
 
-container.registerSingleton<IUsersRepository> (
-    "UsersRepository", 
-    UsersRepository
+container.registerSingleton<IUsersRepository> ("UsersRepository", UsersRepository)
 
-)
+container.registerSingleton<ICarsRepository> ("CarsRepository", CarsRepository)

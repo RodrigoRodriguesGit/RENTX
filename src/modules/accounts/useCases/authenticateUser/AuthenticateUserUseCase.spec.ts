@@ -1,10 +1,9 @@
 import { AppError } from "@shared/errors/AppError"
 import { ICreateCategoryDTO } from "@modules/cars/repositories/ICategoriesRepository"
 import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO"
-import { User } from "../../entities/User"
 import { UsersRepositoryInMemory } from "@modules/accounts/repositories/in-memory/UsersRepositoryInMemory"
-import { CreateUserUseCase } from "../createUser/CreateUserUseCase"
 import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase"
+import { CreateUserUseCase } from "../CreateUser/CreateUserUseCase"
 
 let authenticateUserUseCase: AuthenticateUserUseCase
 let usersRepositoryInMemory: UsersRepositoryInMemory
