@@ -69,4 +69,8 @@ describe("Create Car", () => {
 
     })
 
+    it("should be able to list all available cars by name", () => {
+        
+    })
+
 })
