@@ -1,4 +1,3 @@
-import { CarsRepository } from "@modules/cars/infra/typeorm/repositories/CarsRepository"
 import { CarsRepositoryInMemory } from "@modules/cars/repositories/in-memory/CarsRepositoryInMemory"
 import { ListCarsUseCase } from "./ListCarsUseCase"
 
@@ -21,14 +20,32 @@ describe("List Cars", () => {
             "license_plate": "DEF-1234", 
             "fine_amount": 40.00,  
             "brand": "Car_brand",
-            "category_id": "category_id"
+            "category_id": "category_id",
         })
 
-        const cars = await listCarsUseCase.execute()
-        console.log(cars)
+        const cars = await listCarsUseCase.execute({})
 
         expect(cars).toEqual([car])
 
-    }) 
+    }); 
+
+    it("should be able to list all available cars by name", async () => {
+        const car = await carsRepositoryInMemory.create({
+            "name": "Car2", 
+            "description": "Car description", 
+            "daily_rate": 110.00, 
+            "license_plate": "DEF-1234", 
+            "fine_amount": 40.00,  
+            "brand": "Car_brand_test",
+            "category_id": "category_id",
+        })
+
+        const cars = await listCarsUseCase.execute({
+            brand: "Car_brand_test",
+        });
+
+        expect(cars).toEqual([car])
+
+    });
 
 })

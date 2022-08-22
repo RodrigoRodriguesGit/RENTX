@@ -2,9 +2,9 @@ import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository";
 import { Car } from "@modules/cars/infra/typeorm/entities/Car";
 
 interface IRequest {
-    category_id: string,
-    brand: string,
-    name: string
+    category_id?: string,
+    brand?: string,
+    name?: string
 }
 
 class ListCarsUseCase {
