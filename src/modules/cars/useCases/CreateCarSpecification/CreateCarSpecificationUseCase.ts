@@ -20,6 +20,8 @@ class CreateCarSpecificationUseCase {
             throw new AppError("Car does not exists!")
         }
 
+        const specifications = await this.sp
+
     }
 
 }
