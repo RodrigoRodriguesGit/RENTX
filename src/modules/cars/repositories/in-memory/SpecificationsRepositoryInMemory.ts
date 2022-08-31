@@ -6,7 +6,7 @@ class SpecificationsRepositoryInMemory implements ISpecificationRepository {
 
     specifications: Specification[] = []
 
-    async create({ name, description }: ICreateSpecificationDTO): Promise<void> {
+    async create({ name, description }: ICreateSpecificationDTO): Promise<Specification> {
     
         const specification = new Specification()
 
@@ -15,6 +15,8 @@ class SpecificationsRepositoryInMemory implements ISpecificationRepository {
         })
 
         this.specifications.push(specification)
+
+        return specification
 
     }
 

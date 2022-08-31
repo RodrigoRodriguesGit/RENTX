@@ -23,17 +23,20 @@ class SpecificationRepository implements ISpecificationRepository {
         
         await this.repository.save(specification);
 
+        return specification
+
     }
 
     async findByName (name: string): Promise<Specification> {
-        const specifications = this.repository.findOne({
+        const specifications = await this.repository.findOne({
             name,
             })
         return specifications;
     }
 
-    findByIds(ids: string[]): Promise<Specification[]> {
-        throw new Error('Method not implemented.');
+    async findByIds(ids: string[]): Promise<Specification[]> {
+        const specifications = await this.repository.findByIds(ids)
+        return specifications
     }
 
 }
