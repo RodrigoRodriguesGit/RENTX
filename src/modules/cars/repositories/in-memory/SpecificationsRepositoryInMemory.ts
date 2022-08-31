@@ -2,7 +2,7 @@ import { Specification } from "@modules/cars/infra/typeorm/entities/Specificatio
 import { isDebuggerStatement } from "typescript";
 import { ICreateSpecificationDTO, ISpecificationRepository } from "../ISpecificationRepository";
 
-class SpecificationInMemory implements ISpecificationRepository {
+class SpecificationsRepositoryInMemory implements ISpecificationRepository {
 
     specifications: Specification[] = []
 
@@ -34,4 +34,4 @@ class SpecificationInMemory implements ISpecificationRepository {
 
 }
 
-export { SpecificationInMemory }
+export { SpecificationsRepositoryInMemory }

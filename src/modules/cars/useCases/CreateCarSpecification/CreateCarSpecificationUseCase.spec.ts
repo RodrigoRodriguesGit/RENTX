@@ -1,15 +1,21 @@
+import { SpecificationRepository } from "@modules/cars/infra/typeorm/repositories/SpecificationRepository"
 import { CarsRepositoryInMemory } from "@modules/cars/repositories/in-memory/CarsRepositoryInMemory"
 import { AppError } from "@shared/errors/AppError"
 import { CreateCarSpecificationUseCase } from "./CreateCarSpecificationUseCase"
+import { SpecificationsRepositoryInMemory } from "@modules/cars/repositories/in-memory/SpecificationsRepositoryInMemory"
 
 let createCarSpecificationUseCase: CreateCarSpecificationUseCase
 let carsRepositoryInMemory: CarsRepositoryInMemory
+let specificationsRepositoryInMemory: SpecificationsRepositoryInMemory
 
 describe("Create Car Specification", () => {
 
     beforeEach(() => {
         carsRepositoryInMemory = new CarsRepositoryInMemory()
-        createCarSpecificationUseCase = new CreateCarSpecificationUseCase(carsRepositoryInMemory)
+        specificationsRepositoryInMemory = new SpecificationsRepositoryInMemory()
+        createCarSpecificationUseCase = new CreateCarSpecificationUseCase(
+            carsRepositoryInMemory,
+            specificationsRepositoryInMemory)
     })
 
     it("should not be able to add a new specification to a now-existent car", async () => {
@@ -37,7 +43,12 @@ describe("Create Car Specification", () => {
             category_id: "Category"    
         })
 
-        const specifications_id = ["54321"]
+        const specification = await specificationsRepositoryInMemory.create({
+            description: "test",
+            name: "test"
+        })
+
+        const specifications_id = [specification.car_id]
 
         await createCarSpecificationUseCase.execute({car_id: car.id, specifications_id})
 

@@ -14,7 +14,7 @@ class SpecificationRepository implements ISpecificationRepository {
     }
 
     // Cria a Categoria
-    async create ({name, description}: ICreateSpecificationDTO): Promise<void> {
+    async create ({name, description}: ICreateSpecificationDTO): Promise<Specification> {
         
         const specification = this.repository.create({
             description,
@@ -30,6 +30,10 @@ class SpecificationRepository implements ISpecificationRepository {
             name,
             })
         return specifications;
+    }
+
+    findByIds(ids: string[]): Promise<Specification[]> {
+        throw new Error('Method not implemented.');
     }
 
 }
