@@ -1,3 +1,6 @@
+
+import "reflect-metadata"
+
 import dayjs from "dayjs"
 
 import { RentalsRepositoryInMemory } from "@modules/rentals/repositories/in-memory/RentalsRepositoryInMemory"
