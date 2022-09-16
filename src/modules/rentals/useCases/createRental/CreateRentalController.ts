@@ -21,8 +21,7 @@ class CreateRentalController {
         return response.status(201).json(rental)
 
     }
-
-
+//teste
 }
 
 export { CreateRentalController }

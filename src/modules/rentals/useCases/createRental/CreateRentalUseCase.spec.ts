@@ -27,7 +27,7 @@ describe("Create Rental", () => {
         const rental = await createRentalUseCase.execute({
             user_id: "12345",
             car_id: "121212",
-            expected_return_date: day24Hours
+            expected_return_date: day24Hours,
         })
 
         console.log(rental)
