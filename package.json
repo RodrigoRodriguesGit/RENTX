@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --poll --inspect --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
-    "test": "jest",
+    "test": "cross-env NODE_ENV=test jest",
     "seed:admin": "ts-node-dev -r tsconfig-paths/register src/shared/infra/typeorm/seed/admin.ts",
     "start": "node index.js"
   },
@@ -21,6 +21,7 @@
     "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
+    "cross-env": "^7.0.3",
     "eslint": "^8.13.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
@@ -50,11 +51,11 @@
     "node-sass": "^7.0.1",
     "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
+    "supertest": "^6.2.4",
     "swagger-ui-express": "^4.3.0",
     "ts-node-dev": "^1.1.8",
     "tsyringe": "^4.7.0",
     "typeorm": "0.2.45",
-    "supertest": "^6.2.4",
     "uuid": "^8.3.2",
     "yarn": "^1.22.19"
   },
