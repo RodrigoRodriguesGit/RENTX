@@ -7,6 +7,7 @@ export default {
 
   // Stop running tests after `n` failures
   bail: true,
+  testTimeout: 30000,
 
   // The directory where Jest should store its cached dependency information
   // cacheDirectory: "C:\\Users\\rodri\\AppData\\Local\\Temp\\jest",
@@ -27,7 +28,6 @@ export default {
   // coveragePathIgnorePatterns: [
   //   "\\\\node_modules\\\\"
   // ],
-
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: "v8",
 
