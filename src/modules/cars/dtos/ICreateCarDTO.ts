@@ -1,6 +1,5 @@
 // Teste de commit 
 import { Specification } from "../infra/typeorm/entities/Specification"
-import { Car } from "../infra/typeorm/entities/Car"
 
 interface ICreateCarDTO {
     name: string, 
